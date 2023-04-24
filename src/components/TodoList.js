@@ -1,4 +1,5 @@
 import React from "react";
+import TodoItem from "./TodoItem";
 
 const TodoList = (props) => {
     const {title, items} = props;
@@ -6,15 +7,11 @@ const TodoList = (props) => {
     return (
         <div className="todolist">
             <h1>{title.toUpperCase()}</h1>
-            {items.map(item => (
-                <li ket={item.id} className="ui-state-default">
-                    <div className="checkbox">
-                        <label>
-                            <input type="checkbox" value=""/>{item.text}
-                        </label>
-                    </div>
-                </li>
-            ))}
+            <ul className="list-unstyled">
+                {items.map(item => (
+                    <TodoItem key={item.id} data={item} />
+                ))}
+            </ul>
         </div>
     )
 }
