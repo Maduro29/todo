@@ -17,6 +17,11 @@ function App() {
       id: 3,
       text: 'KT',
       status: false
+    },
+    {
+      id: 4,
+      text: 'SE',
+      status: true
     }
   ];
 
